@@ -9,6 +9,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
+    "@nuxtjs/vercel-builder": "^0.18.1",
     "axios": "^0.19.2",
     "cookieparser": "^0.1.0",
     "dayjs": "^1.8.32",
