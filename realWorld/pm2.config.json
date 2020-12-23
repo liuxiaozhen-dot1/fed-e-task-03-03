@@ -1,10 +1,9 @@
 {
   "apps": [
     {
-      "name": "RealWorld",
+      "name": "realWorld",
       "script": "npm",
-      "args": "start",
-      "max_memory_restart":"200M"
+      "args": "start"
     }
   ]
 }
