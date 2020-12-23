@@ -53,8 +53,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /root/realWorld
-          wget https://github.com/liuxiaozhen-dot1/fed-e-task-03-03/releases/latest/download/release.tgz -O release.tgz
+          cd /root/fed-e-task-03-03/realWorld
+          wget https://github.com/liuxiaozhen-dot1/fed-e-task-03-03/realWorld/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
           npm install --production
           pm2 reload pm2.config.json

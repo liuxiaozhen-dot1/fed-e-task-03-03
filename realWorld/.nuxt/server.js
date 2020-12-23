@@ -1,5 +1,6 @@
 import { stringify } from 'querystring'
 import Vue from 'vue'
+import { normalizeURL } from '@nuxt/ufo'
 import fetch from 'node-fetch'
 import middleware from './middleware.js'
 import {
@@ -48,12 +49,12 @@ const createNext = ssrContext => (opts) => {
     opts.path = urlJoin(routerBase, opts.path)
   }
   // Avoid loop redirect
-  if (opts.path === ssrContext.url) {
+  if (decodeURI(opts.path) === decodeURI(ssrContext.url)) {
     ssrContext.redirected = false
     return
   }
   ssrContext.res.writeHead(opts.status, {
-    Location: opts.path
+    Location: normalizeURL(opts.path)
   })
   ssrContext.res.end()
 }
@@ -119,8 +120,6 @@ export default async (ssrContext) => {
     app.context.error({ statusCode: 404, path: ssrContext.url, message: 'This page could not be found' })
     return renderErrorPage()
   }
-
-  const s = Date.now()
 
   // Components are already resolved by setContext -> getRouteData (app/utils.js)
   const Components = getMatchedComponents(router.match(ssrContext.url))
@@ -275,8 +274,6 @@ export default async (ssrContext) => {
 
     return Promise.all(promises)
   }))
-
-  if (process.env.DEBUG && asyncDatas.length) console.debug('Data fetching ' + ssrContext.url + ': ' + (Date.now() - s) + 'ms')
 
   // datas are the first row of each
   ssrContext.nuxt.data = asyncDatas.map(r => r[0] || {})
