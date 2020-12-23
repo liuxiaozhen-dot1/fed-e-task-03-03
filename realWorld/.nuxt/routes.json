@@ -6,46 +6,38 @@
       {
         "name": "home",
         "path": "",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/home",
-        "_name": "_0ef62f16"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/home"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/login",
-        "_name": "_5ff007dc"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/login"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/login",
-        "_name": "_5ff007dc"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/login"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/profile",
-        "_name": "_71bfdfdc"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/profile"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/settings",
-        "_name": "_a3bbfa4c"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/settings"
       },
       {
         "path": "/editor/:slug?",
         "name": "editor",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/editor",
-        "_name": "_246ba9e4"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/editor"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/article",
-        "_name": "_a42b5942"
+        "component": "/Users/liuxiaozhen/work/nuxtReal/realWorld/pages/article"
       }
-    ],
-    "_name": "_303a83a1"
+    ]
   }
 ]
