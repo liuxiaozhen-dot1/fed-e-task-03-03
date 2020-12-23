@@ -1,5 +1,4 @@
-# 访问地址     https://fed-e-task-03-03-gqizms24o.vercel.app/
-
+#### 访问地址 https://fed-e-task-03-03-gqizms24o.vercel.app/
 
 ##### 什么是vuex 
 
@@ -102,6 +101,6 @@ module.exports = {
     extendRoutes(routes, resolve) {
 
       // 清除Nuxt.js基于pages目录生成的路由表规则
-      
+
       routes.splice(0)
 ```
