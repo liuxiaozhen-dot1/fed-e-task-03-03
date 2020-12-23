@@ -54,10 +54,9 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /product/front/realworld-nuxtjs
-          wget https://github.com/2604150210/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
+          wget https://github.com/liuxiaozhen-dot1/fed-e-task-03-03/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
           npm install --production
           pm2 reload pm2.config.json
 
 
-          
