@@ -55,6 +55,7 @@ module.exports = {
     host: '0.0.0.0',// 监听所有外网地址。在生产环境服务器上外网环境就能访问到了，在本地的话，局域网都能访问到了
     port: 80
   },
+  apps: [{ name: 'rw', script: 'app.js', env: { NODE_ENV: 'production' } }],
   // 注册插件
   plugins: [
     '~/plugins/request.js', // 波浪线开头表示从根路径触发
