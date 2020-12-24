@@ -364,7 +364,44 @@ jobs:
           pm2 reload pm2.config.json
 
 
+11. 使用vercel发布部署
 
+全局安装 npm i -g vercel
+
+项目根目录添加 vercel.json 文件
+```js
+{
+  "builds": [
+    {
+      "src": "nuxt.config.js", // 配置文件
+      "use": "@nuxtjs/vercel-builder", // 使用的构建工具
+      "config": {}
+    }
+  ]
+}
+```
+修改 nuxt 服务端口号
+
+```js
+// nuxt.config.js
+module.exports = {
+  // ...
+  server: {
+    // 默认localhost 只能本地访问
+    // 若想要对外访问，要配置为 0.0.0.0
+    host: '0.0.0.0',
+    // nuxtjs 默认 3000
+    // vercel 默认80
+    port: 80
+  }
+}
+
+```
+安装 npm i @nuxtjs/vercel-builder
+
+项目推送到github并在vercel中导入项目
+
+执行命令vercel发布
 
 
 
