@@ -100,16 +100,6 @@ NuxtJS案例
 
 1. 模版（将外部资源链接放入模板中）
 
-<!DOCTYPE html>
-<html {{ HTML_ATTRS }}>
-  <head {{ HEAD_ATTRS }}>
-    {{ HEAD }}
-  </head>
-  <body {{ BODY_ATTRS }}>
-    {{ APP }}
-  </body>
-</html>
-
 2. 自定义路由表
 
 ```js
